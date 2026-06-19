@@ -1873,3 +1873,74 @@ body[data-theme="basic"] .collection-box:hover {
   transition: var(--transition-smooth);
 }
 .kuznya-credit a:hover { color: var(--accent-hover); }
+
+/* ============================================================
+   Kuznya glowing badge on hero (link to kuznya.studio)
+   ============================================================ */
+.kuznya-badge {
+  position: absolute;
+  top: 102px;
+  right: 28px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  animation: kuznyaFloat 4.5s ease-in-out infinite;
+}
+.kuznya-badge-logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(242, 160, 60, 0.55);
+  box-shadow: 0 0 22px 4px rgba(242, 140, 40, 0.35), 0 8px 24px rgba(0,0,0,0.45);
+  animation: kuznyaGlow 2.6s ease-in-out infinite;
+  transition: transform 0.4s cubic-bezier(0.25,1,0.5,1), box-shadow 0.4s ease;
+}
+.kuznya-badge-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kuznya-badge-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E7D6C6;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+  transition: color 0.3s ease;
+}
+.kuznya-badge-label b { color: #F2A030; font-weight: 700; }
+.kuznya-badge:hover .kuznya-badge-logo {
+  transform: scale(1.09);
+  box-shadow: 0 0 38px 9px rgba(242, 140, 40, 0.6), 0 10px 28px rgba(0,0,0,0.5);
+}
+.kuznya-badge:hover .kuznya-badge-label { color: #FFFFFF; }
+
+@keyframes kuznyaGlow {
+  0%, 100% { box-shadow: 0 0 20px 3px rgba(242,140,40,0.30), 0 8px 24px rgba(0,0,0,0.45); }
+  50%      { box-shadow: 0 0 32px 8px rgba(242,140,40,0.55), 0 8px 24px rgba(0,0,0,0.45); }
+}
+@keyframes kuznyaFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-7px); }
+}
+
+@media (max-width: 768px) {
+  .kuznya-badge { top: 90px; right: 14px; gap: 5px; }
+  .kuznya-badge-logo { width: 60px; height: 60px; border-radius: 15px; }
+  .kuznya-badge-label { font-size: 9px; }
+}
+
+/* ============================================================
+   Readability fix — crisper header nav over photographic hero
+   (was muted taupe-on-dark, low contrast)
+   ============================================================ */
+.nav-link {
+  color: rgba(245, 238, 230, 0.84);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+.nav-link:hover { color: #FFFFFF; }
+.main-header.scrolled .nav-link { text-shadow: none; color: rgba(245, 238, 230, 0.9); }
+/* logo a touch brighter/crisper too */
+.logo { text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+/* hero descriptive text slightly lifted for legibility on image */
+.hero-desc { color: #D8CABB; }
