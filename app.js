@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const themeVal = btn.getAttribute('data-theme-val');
       body.setAttribute('data-theme', themeVal);
       
-      showToast(`Тема змінена на "${btn.title}"`);
+      showToast(`Активовано тему: ${btn.title}`);
       initCanvasBackground();
     });
   });
@@ -183,9 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.letterSpacing = '0.2em';
     ctx.fillText('CRAZY HORSE LEATHER', patinaCanvas.width / 2, patinaCanvas.height / 2 - 15);
     ctx.font = 'normal 700 11px "Manrope", sans-serif';
-    ctx.fillText('HANDMADE IN LVIV', patinaCanvas.width / 2, patinaCanvas.height / 2 + 15);
+    ctx.fillText('HANDMADE CRAFT WORKSHOP', patinaCanvas.width / 2, patinaCanvas.height / 2 + 15);
     ctx.font = 'italic 400 11px "Cormorant Garamond", Georgia, serif';
-    ctx.fillText('100% Genuine Craftsmanship', patinaCanvas.width / 2, patinaCanvas.height / 2 + 35);
+    ctx.fillText('Genuine Craftsmanship', patinaCanvas.width / 2, patinaCanvas.height / 2 + 35);
     ctx.restore();
   }
 
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCanvasBackground();
     drawAllStrokes();
-    showToast("Додано знос шкіри");
+    showToast("Нанесено малюнок патини");
   });
 
   polishBtn.addEventListener('click', () => {
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         strokes = [];
         initCanvasBackground();
-        showToast("Виріб відполіровано воском!");
+        showToast("Відполіровано восковим бальзамом");
       }
     }
     fade();
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cart.push({ id, name, price, img, qty: 1 });
     }
     updateCartCount();
-    showToast(`"${name}" додано до кошика`);
+    showToast(`«${name}» додано до кошика`);
   }
 
   function updateCartCount() {
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const upsellWrapper = document.getElementById('cart-upsell-wrapper');
     
     if (cart.length === 0) {
-      cartItemsContainer.innerHTML = '<div class="empty-cart-message">Ваш кошик порожній</div>';
+      cartItemsContainer.innerHTML = '<div class="empty-cart-message">Ваш кошик порожній.</div>';
       cartTotalPrice.textContent = '0 грн';
       checkoutBtn.disabled = true;
       if (upsellWrapper) upsellWrapper.style.display = 'none';
@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           const branches = citiesData[city];
           branchInput.value = branches[0];
-          showToast(`Вибрано місто ${city}. Автозаповнено відділення.`);
+          showToast(`Доставку оформлено: ${city}`);
         });
         cityDropdown.appendChild(item);
       });
@@ -568,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const name = document.getElementById('client-name').value;
     toggleModal(false);
-    showToast(`Замовлення успішно створено! Дякуємо, ${name}.`);
+    showToast(`Дякуємо, ${name}! Замовлення оформлено.`);
     cart = [];
     updateCartCount();
   });
