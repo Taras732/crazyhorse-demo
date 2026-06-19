@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAZY HORSE — Преміальні вироби зі шкіри ручної роботи</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="A">
+
+  <!-- Glowing Background Orbs for Glassmorphism Theme -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Header -->
+  <header class="main-header" id="main-header">
+    <div class="container header-container">
+      <a href="#hero" class="logo">CRAZY HORSE</a>
+      <nav class="nav-menu">
+        <a href="#collections" class="nav-link">Колекції</a>
+        <a href="#catalog" class="nav-link">Каталог</a>
+        <a href="#patina-section" class="nav-link">Про шкіру</a>
+        <a href="#craftsmanship" class="nav-link">Майстерність</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="open-cart-btn" aria-label="Відкрити кошик">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav">
+      <a href="#collections" class="mobile-nav-link">Колекції</a>
+      <a href="#catalog" class="mobile-nav-link">Каталог</a>
+      <a href="#patina-section" class="mobile-nav-link">Про шкіру</a>
+      <a href="#craftsmanship" class="mobile-nav-link">Майстерність</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="https://instagram.com/crazyhorselviv" target="_blank">Instagram @crazyhorselviv</a>
+      <span>Львів, Україна</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-media">
+      <img src="assets/gen_hero.png" alt="Шкіряні вироби Crazy Horse на тлі коня" class="hero-bg" id="hero-bg"
+           onerror="this.closest('.hero-media').classList.add('hero-fallback')">
+      <div class="hero-scrim"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-subtitle">Крафтова майстерня — Львів</span>
+        <h1 class="hero-title">Шкіра з характером, <br>яка живе вашим життям</h1>
+        <p class="hero-desc">
+          Утилітарні аксесуари виключно зі шкіри Crazy Horse. Вона закарбовує кожен ваш дотик, перетворюючи подряпини на благородну вінтажну патину.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">Переглянути каталог</a>
+          <a href="#patina-section" class="btn btn-secondary">Спробувати на дотик</a>
+        </div>
+      </div>
+    </div>
+    <a href="#collections" class="hero-scroll" aria-label="Гортати далі">
+      <span>Гортайте</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
+
+  <!-- Value Propositions / Brand Trust Banner -->
+  <section class="trust-banner-section reveal">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h4>Довічна гарантія на шви</h4>
+        <p>Сідельний шов вощеною ниткою ніколи не розпуститься, навіть якщо пошкодити один із стібків.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h4>Швидка відправка</h4>
+        <p>Більшість товарів є в наявності у майстерні та відправляються Новою Поштою у день замовлення.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h4>Індівідуальне гравіювання</h4>
+        <p>Нанесемо ваші ініціали або особливу дату методом гарячого тиснення для унікального подарунка.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Visual Category Hub -->
+  <section class="collections-section reveal" id="collections">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tagline">Фірмові лінійки</span>
+        <h2 class="section-title">Категорії виробів</h2>
+        <p class="section-desc">Кожен виріб розроблений з акцентом на мінімалістичний силует, практичність та довговічність.</p>
+      </div>
+      
+      <div class="collections-grid">
+        <div class="collection-box" style="background-image: linear-gradient(to bottom, rgba(19,13,10,0.1) 0%, rgba(19,13,10,0.85) 100%), url('assets/backpack.png');">
+          <div class="collection-inner">
+            <h3>Рюкзаки & Дорожні сумки</h3>
+            <p>Великі форми для подорожей та щоденних міських пригод з товстої цільної шкіри.</p>
+            <a href="#catalog" class="collection-link" data-filter="backpack">Дивитись вироби →</a>
+          </div>
+        </div>
+        
+        <div class="collection-box" style="background-image: linear-gradient(to bottom, rgba(19,13,10,0.1) 0%, rgba(19,13,10,0.85) 100%), url('assets/bag.png');">
+          <div class="collection-inner">
+            <h3>Сумки через плече</h3>
+            <p>Практичні кросбоді та месенджери з надійними замками та регульованими ременями.</p>
+            <a href="#catalog" class="collection-link" data-filter="bag">Дивитись вироби →</a>
+          </div>
+        </div>
+        
+        <div class="collection-box" style="background-image: linear-gradient(to bottom, rgba(19,13,10,0.1) 0%, rgba(19,13,10,0.85) 100%), url('assets/wallet.png');">
+          <div class="collection-inner">
+            <h3>Портмоне & Картхолдери</h3>
+            <p>Компактні затискачі та класичні гаманці з продуманою ергономікою відділень.</p>
+            <a href="#catalog" class="collection-link" data-filter="wallet">Дивитись вироби →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Heritage Cinematic Band -->
+  <section class="story-band reveal">
+    <div class="story-band-media">
+      <img src="assets/gen_story.png" alt="Майстер шиє шкіряний виріб вручну">
+    </div>
+    <div class="container">
+      <div class="story-band-inner">
+        <span class="section-tagline">Чому Crazy Horse</span>
+        <p class="story-quote">«Шкіра, що приборкує час, як вершник <span>дикого коня</span>.»</p>
+        <p class="story-text">
+          Назва Crazy Horse — це не лише тип шкіри. Це характер матеріалу: норовливого спочатку, але вірного на десятиліття. Кожна подряпина тут не дефект, а слід вашої історії, який лягає у благородну патину. Ми шиємо вручну у Львові сідельним швом — тим самим, що тримає кінську збрую.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Patina Sandbox -->
+  <section class="patina-section reveal" id="patina-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tagline">Дотик до бренду</span>
+        <h2 class="section-title">Як поводиться Crazy Horse?</h2>
+        <p class="section-desc">
+          Спробуйте самі. Затисніть мишку або проведіть пальцем по зразку шкіри нижче, щоб залишити «подряпини». Потім відполіруйте їх простим рухом.
+        </p>
+      </div>
+
+      <div class="sandbox-container">
+        <div class="sandbox-leather">
+          <canvas id="patina-canvas" width="600" height="350"></canvas>
+          <div class="sandbox-instructions">
+            <span>Проведіть курсором для подряпин</span>
+          </div>
+        </div>
+        <div class="sandbox-controls">
+          <button id="polish-btn" class="btn btn-primary">Відполірувати виріб</button>
+          <button id="scratch-demo-btn" class="btn btn-secondary">Додати текстуру зносу</button>
+          <p class="sandbox-info">
+            <strong>Секрет Crazy Horse:</strong> Завдяки гарячому просоченню тугоплавкими восками, шкіра світлішає при заломах та терті. Будь-яку подряпину можна легко стерти, просто потерши її пальцем чи вологою м'якою тканиною.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section class="catalog-section reveal" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tagline">Унікальні вироби</span>
+          <h2 class="section-title">Виберіть свою річ</h2>
+        </div>
+        <div class="catalog-filters">
+          <button class="filter-btn active" data-filter="all">Всі товари</button>
+          <button class="filter-btn" data-filter="backpack">Рюкзаки</button>
+          <button class="filter-btn" data-filter="bag">Сумки</button>
+          <button class="filter-btn" data-filter="wallet">Гаманці</button>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <div class="product-card" data-category="backpack">
+          <div class="product-img-wrapper">
+            <img src="assets/backpack.png" alt="Рюкзак bp_15_green_bordo" class="product-img">
+            <span class="product-tag">Популярне</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Рюкзак bp_15_green_bordo</h3>
+            <p class="product-desc">Зручний, багатофункціональний рюкзак з унікальним поєднанням глибокого смарагдового та бордового відтінків.</p>
+            <div class="product-footer">
+              <span class="product-price">4 449 грн</span>
+              <button class="btn btn-icon add-to-cart" data-id="1" data-name="Рюкзак bp_15_green_bordo" data-price="4449" data-img="assets/backpack.png">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card" data-category="bag">
+          <div class="product-img-wrapper">
+            <img src="assets/bag.png" alt="Жіноча сумка wb_062_bordo" class="product-img">
+            <span class="product-tag">Новинка</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Жіноча сумка wb_062_bordo</h3>
+            <p class="product-desc">Чарівна супутниця на кожний день. Легко вміщує документи, телефон, косметичку та особисті речі.</p>
+            <div class="product-footer">
+              <span class="product-price">2 769 грн</span>
+              <button class="btn btn-icon add-to-cart" data-id="2" data-name="Жіноча сумка wb_062_bordo" data-price="2769" data-img="assets/bag.png">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card" data-category="wallet">
+          <div class="product-img-wrapper">
+            <img src="assets/wallet.png" alt="Чоловічий гаманець Classic Brown" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Гаманець чоловічий Classic Brown</h3>
+            <p class="product-desc">Надійний класичний біфолд з відділенням для купюр, монетницею та 4 слотами під картки.</p>
+            <div class="product-footer">
+              <span class="product-price">1 450 грн</span>
+              <button class="btn btn-icon add-to-cart" data-id="3" data-name="Гаманець чоловічий Classic Brown" data-price="1450" data-img="assets/wallet.png">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Legacy / About -->
+  <section class="about-section reveal" id="craftsmanship">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-image-overlay"></div>
+        <div class="about-stamp">
+          <span>HANDMADE</span>
+          <span>LVIV</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tagline">Львівські традиції</span>
+        <h2 class="section-title">Майстерність у кожному стібку</h2>
+        <p>
+          Кожен виріб Crazy Horse виготовляється повністю вручну нашими майстрами у Львові. Ми не використовуємо дешеві замінники або машинний шов, що розпускається від однієї пошкодженої нитки. 
+        </p>
+        <p>
+          Ми шиємо міцним сідельним швом у дві голки, використовуючи товсті вощені нитки. Це гарантує, що виріб прослужить вам десятиліттями та перейде у спадок з унікальною історією вашого життя.
+        </p>
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Натуральна шкіра</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Років служби</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">Lviv</span>
+            <span class="stat-label">Локальне виробництво</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leather Care Guidelines -->
+  <section class="care-section reveal">
+    <div class="container care-grid">
+      <div class="care-content">
+        <span class="section-tagline">Корисна інформація</span>
+        <h2 class="section-title">Правила догляду за шкірою</h2>
+        <p class="margin-bottom-md">Crazy Horse — невибагливий матеріал, але правильний догляд допоможе зберегти його первинний лоск на роки.</p>
+        
+        <ul class="care-list">
+          <li>
+            <span class="care-num">01</span>
+            <div>
+              <strong>Прибирайте подряпини тертям</strong>
+              <p>Невеликі потертості можна стерти просто потерши їх подушечкою пальця або сухою ганчіркою.</p>
+            </div>
+          </li>
+          <li>
+            <span class="care-num">02</span>
+            <div>
+              <strong>Уникайте тривалого намокання</strong>
+              <p>Якщо виріб потрапив під дощ, просто протріть його сухою м'якою тканиною та залиште висохнути природним шляхом.</p>
+            </div>
+          </li>
+          <li>
+            <span class="care-num">03</span>
+            <div>
+              <strong>Використовуйте воскові бальзами</strong>
+              <p>Раз на кілька місяців обробляйте шкіру спеціальним прозорим воском, щоб відновити її жировий баланс і колір.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="care-interactive-visual">
+        <div class="care-card-highlight">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <h4>Шкіра, що дорожчає з роками</h4>
+          <p>Подібно до якісного вина, вироби з Crazy Horse набувають справжнього вінтажного стилю лише після кількох років активного використання.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordions) -->
+  <section class="faq-section reveal" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tagline">Є питання?</span>
+        <h2 class="section-title">Питання та Відповіді</h2>
+        <p class="section-desc">Тут ми зібрали відповіді на найпопулярніші запитання про наші шкіряні аксесуари.</p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Чи бруднить шкіра Crazy Horse світлий одяг?</span>
+            <span class="faq-icon-state">+</span>
+          </button>
+          <div class="faq-panel">
+            <p>У перші дні використання нова шкіра може залишати легкі сліди на білому одязі в місцях сильного тертя (через особливості фінішного воскового напилення). Ми рекомендуємо протерти виріб сухою тканиною перед першим використанням. Через кілька днів пори закриваються і шкіра стає абсолютно безпечною.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Як замовити індивідуальне тиснення?</span>
+            <span class="faq-icon-state">+</span>
+          </button>
+          <div class="faq-panel">
+            <p>При оформленні замовлення вкажіть у коментарях або повідомте менеджеру в Telegram, які саме літери/цифри ви бажаєте нанести. Тиснення робиться латунними кліше под високою температурою на окремому шматочку шкіри або безпосередньо на виробі. Вартість послуги — 150 грн.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Чи можна повернути товар, якщо він не підійшов?</span>
+            <span class="faq-icon-state">+</span>
+          </button>
+          <div class="faq-panel">
+            <p>Звичайно. Відповідно до законодавства України, ви можете повернути або обміняти виріб протягом 14 днів з моменту покупки, якщо він не має ознак використання та збережений його товарний вигляд. Зверніть увагу, що товари з індивідуальним тисненням поверненню не підлягають.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>Ваш кошик</h3>
+        <button class="close-btn" id="close-cart-btn" aria-label="Закрити кошик">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-items" id="cart-items-container">
+        <!-- Cart items populated by JS -->
+        <div class="empty-cart-message">Ваш кошик порожній</div>
+      </div>
+
+      <!-- Cross-Sell Upsell Section -->
+      <div class="cart-upsell-section" id="cart-upsell-wrapper">
+        <h4>Рекомендуємо додати:</h4>
+        <div class="upsell-item">
+          <div class="upsell-details">
+            <strong>Фірмовий віск для догляду (50мл)</strong>
+            <span>Захищає від вологи та полірує подряпини</span>
+          </div>
+          <button class="btn btn-secondary btn-sm add-upsell-btn" data-id="u1" data-name="Фірмовий віск для догляду" data-price="190" data-img="https://placehold.co/80x80?text=Wax">
+            + 190 грн
+          </button>
+        </div>
+        <div class="upsell-item">
+          <div class="upsell-details">
+            <strong>Шкіряний брелок Lviv</strong>
+            <span>Зроблений з обрізків шкіри вашого замовлення</span>
+          </div>
+          <button class="btn btn-secondary btn-sm add-upsell-btn" data-id="u2" data-name="Шкіряний брелок Lviv" data-price="95" data-img="https://placehold.co/80x80?text=Keychain">
+            + 95 грн
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Разом до сплати:</span>
+          <span id="cart-total-price">0 грн</span>
+        </div>
+        <button class="btn btn-primary w-full" id="checkout-btn">Оформити замовлення</button>
+        <button class="btn btn-secondary w-full telegram-direct-btn" style="margin-top: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; vertical-align: middle;">
+            <path d="M21.198 2.43a2.242 2.242 0 0 0-2.235.155L2.83 12.016a2.236 2.236 0 0 0 .16 3.967l4.7 1.83 2.14 6.74a1.12 1.12 0 0 0 1.956.345l3.22-3.89 5.3 4.12c.79.61 1.93.26 2.24-.7l3.25-18.7a1.12 1.12 0 0 0-1.618-1.398l-.08-.06z"></path>
+          </svg>
+          Замовити через Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkout-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Оформлення замовлення</h3>
+        <button class="close-btn" id="close-modal-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form class="checkout-form" id="checkout-form">
+        <div class="form-group">
+          <label for="client-name">Ім'я та Прізвище</label>
+          <input type="text" id="client-name" required placeholder="Іван Мазепа">
+        </div>
+        <div class="form-group">
+          <label for="client-phone">Номер телефону</label>
+          <input type="tel" id="client-phone" required placeholder="+38 (099) 123-45-67">
+        </div>
+        <div class="form-group relative">
+          <label for="client-city">Місто доставки (Нова Пошта)</label>
+          <input type="text" id="client-city" required placeholder="Почніть вводити назву міста...">
+          <div class="autocomplete-dropdown" id="city-autocomplete">
+            <!-- Autocomplete hints populated by JS -->
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="client-branch">Відділення / Поштомат</label>
+          <input type="text" id="client-branch" required placeholder="Введіть номер відділення або адресу...">
+        </div>
+        <div class="checkout-summary" id="checkout-summary-list">
+          <!-- Summary elements -->
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Підтвердити замовлення</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sticky Theme Switcher / Controls Panel -->
+  <div class="theme-switcher-bar">
+    <span class="theme-switcher-title">Варіанти дизайну:</span>
+    <div class="theme-buttons">
+      <button class="theme-btn active" data-theme-val="A" title="Кінематографічний дизайн">
+        <span class="theme-color-dot" style="background: linear-gradient(135deg, #C59B62, #130D0A);"></span>
+        <span class="theme-name">Кінематографічний</span>
+      </button>
+      <button class="theme-btn" data-theme-val="basic" title="Класичний дизайн">
+        <span class="theme-color-dot" style="background-color: #1C1410;"></span>
+        <span class="theme-name">Класичний</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast">Виріб додано до кошика</div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">CRAZY HORSE</a>
+        <p>Крафтова майстерня унікальних виробів зі шкіри з природним вінтажним характером. Ручний сідельний шов. Львів, Україна.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Корисні лінки</h4>
+        <a href="#collections">Колекції</a>
+        <a href="#catalog">Каталог товарів</a>
+        <a href="#patina-section">Про шкіру Crazy Horse</a>
+        <a href="#craftsmanship">Майстерність шва</a>
+      </div>
+      <div class="footer-social">
+        <h4>Ми в мережах</h4>
+        <a href="https://instagram.com/crazyhorselviv" target="_blank" class="social-link">Instagram: @crazyhorselviv</a>
+        <a href="https://facebook.com/crazyhorselviv" target="_blank" class="social-link">Facebook: @crazyhorselviv</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Crazy Horse © 2026. Усі права захищено. Створено з повагою до тактильної спадщини.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    // Redesign behaviours: mobile menu, header scroll state, hero parallax
+    (function () {
+      const body = document.body;
+      const header = document.getElementById('main-header');
+      const toggle = document.getElementById('menu-toggle');
+      const heroBg = document.getElementById('hero-bg');
+
+      // Mobile menu
+      if (toggle) {
+        const closeMenu = () => {
+          body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        };
+        toggle.addEventListener('click', () => {
+          const open = body.classList.toggle('menu-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(l =>
+          l.addEventListener('click', closeMenu));
+        window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+      }
+
+      // Header scroll state + hero parallax (rAF-throttled)
+      let ticking = false;
+      const onScroll = () => {
+        const y = window.scrollY;
+        if (header) header.classList.toggle('scrolled', y > 40);
+        if (heroBg && y > 0 && y < window.innerHeight) {
+          heroBg.style.transform = 'translateY(' + (y * 0.28) + 'px) scale(1.06)';
+        }
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+      }, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
