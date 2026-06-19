@@ -61,10 +61,15 @@
     </div>
   </div>
 
-  <!-- Hero Section (split: text left / product right) -->
+  <!-- Hero Section (cinematic full-bleed; switch background image) -->
   <section class="hero-section" id="hero">
-    <div class="hero-grain"></div>
-    <div class="container hero-split">
+    <div class="hero-media">
+      <img src="assets/gen_hero.png" alt="Шкіряні вироби Crazy Horse у майстерні" class="hero-bg" id="hero-bg"
+           onerror="this.closest('.hero-media').classList.add('hero-fallback')">
+      <div class="hero-scrim"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="container hero-container">
       <div class="hero-content">
         <span class="hero-subtitle">Крафтова майстерня — Львів</span>
         <h1 class="hero-title">Шкіра з характером, <br>яка живе вашим життям</h1>
@@ -75,20 +80,18 @@
           <a href="#catalog" class="btn btn-primary">Переглянути каталог</a>
           <a href="#patina-section" class="btn btn-secondary">Спробувати на дотик</a>
         </div>
-      </div>
-      <div class="hero-visual">
-        <img src="assets/gen_hero2.png" id="hero-img" alt="Шкіряний виріб Crazy Horse">
-        <div class="hero-img-switch" role="group" aria-label="Вибір фото">
-          <button type="button" data-img="assets/gen_hero2.png" class="active">Рюкзак</button>
-          <button type="button" data-img="assets/gen_hero.png">Майстерня</button>
+        <div class="hero-img-switch" role="group" aria-label="Фонове фото">
+          <span class="his-label">Фон:</span>
+          <button type="button" data-img="assets/gen_hero.png" class="active">Майстерня</button>
+          <button type="button" data-img="assets/gen_hero2.png">Рюкзак</button>
         </div>
       </div>
     </div>
 
     <a class="kuznya-badge" href="https://kuznya.studio" target="_blank" rel="noopener"
-       aria-label="Зроблено в Кузні — перейти на kuznya.studio">
-      <img class="kuznya-badge-logo" src="assets/kuznya-logo.png" alt="Логотип Кузні">
-      <span class="kuznya-badge-label">Зроблено в <b>Кузні</b></span>
+       aria-label="Викувано в Кузні — перейти на kuznya.studio">
+      <span class="kuznya-badge-tile"><img src="assets/kuznya-logo.png" alt="Логотип Кузні"></span>
+      <span class="kuznya-badge-label">Викувано в <b>Кузні</b></span>
     </a>
 
     <a href="#collections" class="hero-scroll" aria-label="Гортати далі">
@@ -578,15 +581,14 @@
       const toggle = document.getElementById('menu-toggle');
       const heroBg = document.getElementById('hero-bg');
 
-      // Hero image switch (Рюкзак / Майстерня)
-      const heroImg = document.getElementById('hero-img');
+      // Hero background-image switch (Майстерня / Рюкзак)
       const imgBtns = document.querySelectorAll('.hero-img-switch button');
       imgBtns.forEach(b => b.addEventListener('click', () => {
-        if (!heroImg) return;
-        heroImg.style.opacity = '0';
+        if (!heroBg) return;
         const src = b.getAttribute('data-img');
+        heroBg.style.opacity = '0';
         const pre = new Image();
-        pre.onload = () => { heroImg.src = src; heroImg.style.opacity = '1'; };
+        pre.onload = () => { heroBg.src = src; heroBg.style.opacity = '1'; };
         pre.src = src;
         imgBtns.forEach(x => x.classList.remove('active'));
         b.classList.add('active');
