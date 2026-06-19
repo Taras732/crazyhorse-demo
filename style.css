@@ -1926,94 +1926,101 @@ body[data-theme="basic"] .collection-box:hover {
   right: 30px;
   z-index: 10;
   text-decoration: none;
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.kuznya-badge-content {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(19, 13, 10, 0.75);
+.kuznya-badge-card {
+  width: 230px;
+  background: rgba(28, 20, 16, 0.65); /* Warm dark leather glass */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(242, 160, 48, 0.4);
-  border-radius: 16px;
-  padding: 10px 16px;
-  box-shadow: 
-    0 0 20px rgba(242, 160, 48, 0.15),
-    0 8px 32px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  animation: kuznyaPulse 3s ease-in-out infinite;
-}
-.kuznya-logo {
-  width: 38px;
-  height: 38px;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(242, 160, 48, 0.3);
-  transition: transform 0.3s ease;
-}
-.kuznya-badge-text {
+  border: 1.5px solid rgba(242, 160, 48, 0.35);
+  border-radius: 18px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 
+    0 0 25px rgba(242, 160, 48, 0.12),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  animation: badgePulse 3.5s ease-in-out infinite;
 }
-.kuznya-badge-title {
+.kuznya-wordmark-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease;
+}
+.kuznya-badge-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242, 160, 48, 0.35), transparent);
+}
+.kuznya-badge-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+.kuznya-badge-lbl {
   font-size: 9px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(235, 220, 204, 0.7);
-  white-space: nowrap;
+  text-align: center;
 }
-.kuznya-badge-title b {
+.kuznya-badge-lbl b {
   color: #FFFFFF;
   font-weight: 600;
 }
-.kuznya-badge-link {
-  font-size: 13px;
+.kuznya-badge-url {
+  font-size: 12px;
   font-weight: 700;
   color: #F2A030;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+  letter-spacing: 0.04em;
   display: flex;
   align-items: center;
   gap: 4px;
   transition: color 0.3s ease;
 }
-.kuznya-badge-link .arrow {
+.kuznya-badge-url .arrow {
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-/* Hover Effects */
+/* Hover Behavior */
 .kuznya-badge:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
-.kuznya-badge:hover .kuznya-badge-content {
-  background: rgba(19, 13, 10, 0.9);
+.kuznya-badge:hover .kuznya-badge-card {
+  background: rgba(28, 20, 16, 0.85);
   border-color: rgba(242, 160, 48, 0.8);
   box-shadow: 
-    0 0 30px rgba(242, 160, 48, 0.35),
-    0 12px 40px rgba(0, 0, 0, 0.6);
+    0 0 35px rgba(242, 160, 48, 0.3),
+    0 14px 45px rgba(0, 0, 0, 0.6);
 }
-.kuznya-badge:hover .kuznya-logo {
-  transform: scale(1.08) rotate(5deg);
+.kuznya-badge:hover .kuznya-wordmark-img {
+  transform: scale(1.02);
 }
-.kuznya-badge:hover .kuznya-badge-link {
+.kuznya-badge:hover .kuznya-badge-url {
   color: #FFFFFF;
 }
-.kuznya-badge:hover .kuznya-badge-link .arrow {
+.kuznya-badge:hover .kuznya-badge-url .arrow {
   transform: translateX(3px);
 }
 
-@keyframes kuznyaPulse {
+@keyframes badgePulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(242, 160, 48, 0.15), 0 8px 32px rgba(0, 0, 0, 0.5);
-    border-color: rgba(242, 160, 48, 0.4);
+    box-shadow: 0 0 20px rgba(242, 160, 48, 0.12), 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(242, 160, 48, 0.35);
   }
   50% {
-    box-shadow: 0 0 35px rgba(242, 160, 48, 0.35), 0 8px 32px rgba(0, 0, 0, 0.5);
-    border-color: rgba(242, 160, 48, 0.75);
+    box-shadow: 0 0 30px rgba(242, 160, 48, 0.28), 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(242, 160, 48, 0.7);
   }
 }
 
@@ -2022,19 +2029,17 @@ body[data-theme="basic"] .collection-box:hover {
     top: 84px;
     right: 12px;
   }
-  .kuznya-badge-content {
-    padding: 8px 12px;
-    gap: 10px;
+  .kuznya-badge-card {
+    width: 165px;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 14px;
   }
-  .kuznya-logo {
-    width: 32px;
-    height: 32px;
+  .kuznya-badge-lbl {
+    font-size: 7px;
   }
-  .kuznya-badge-link {
-    font-size: 11px;
-  }
-  .kuznya-badge-title {
-    font-size: 8px;
+  .kuznya-badge-url {
+    font-size: 10px;
   }
   .hero-img-switch {
     margin-top: 22px;
