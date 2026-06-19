@@ -1932,12 +1932,12 @@ body[data-theme="basic"] .collection-box:hover {
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .kuznya-badge-tile {
-  width: 86px;
-  height: 86px;
-  border-radius: 18px;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid rgba(242, 160, 60, 0.65);
-  box-shadow: 0 0 24px 4px rgba(242, 140, 40, 0.42), 0 8px 22px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(245, 165, 70, 0.85);
+  box-shadow: 0 0 30px 7px rgba(245, 150, 55, 0.50), 0 8px 22px rgba(0, 0, 0, 0.55);
   animation: kuznyaGlow 2.8s ease-in-out infinite;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
 }
@@ -1958,13 +1958,13 @@ body[data-theme="basic"] .collection-box:hover {
 }
 
 @keyframes kuznyaGlow {
-  0%, 100% { box-shadow: 0 0 22px 3px rgba(242,140,40,0.36), 0 8px 22px rgba(0,0,0,0.5); }
-  50%      { box-shadow: 0 0 36px 9px rgba(242,140,40,0.60), 0 8px 22px rgba(0,0,0,0.5); }
+  0%, 100% { box-shadow: 0 0 26px 5px rgba(245,150,55,0.42), 0 8px 22px rgba(0,0,0,0.5); }
+  50%      { box-shadow: 0 0 42px 10px rgba(245,150,55,0.70), 0 8px 22px rgba(0,0,0,0.5); }
 }
 
 @media (max-width: 768px) {
-  .kuznya-badge { top: 86px; right: 14px; gap: 6px; }
-  .kuznya-badge-tile { width: 56px; height: 56px; border-radius: 14px; }
+  .kuznya-badge { top: 84px; right: 14px; gap: 6px; }
+  .kuznya-badge-tile { width: 66px; height: 66px; border-width: 1.5px; }
   .kuznya-badge-label { font-size: 9px; }
   .hero-img-switch { margin-top: 22px; }
 }
